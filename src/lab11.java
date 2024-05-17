@@ -29,11 +29,11 @@ public class lab11 {
                 int wordCount = 0;
                 int characterCount = 0;
                 String[] words = new String[0];
-                String[] characters = new String[0];
+                int characters = 0;
                 while (in.hasNextLine()) {
                     line = in.nextLine();
                     words = line.split(" ");
-                    characters = line.split("aAbBcCdDeEfFgGhHiIjJ1234567890");
+                    characters = line.length();
                     for (int i = 0; i < words.length; i++) {
                         if (words[i].equalsIgnoreCase("talawanda")) {
                             found = true;
@@ -47,9 +47,6 @@ public class lab11 {
                 }
                 for (int i = 0; i < words.length; i++){
                     wordCount++;
-                }
-                for (int i = 0; i < characters.length; i++){
-                    characterCount++;
                 }
                 JOptionPane.showMessageDialog(null, wordCount);
                 JOptionPane.showMessageDialog(null, characterCount);
